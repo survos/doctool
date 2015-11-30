@@ -59,14 +59,14 @@ class JsonToMdCommand extends Command
             $out .= "\nArguments\n";
             $out .= str_repeat('=', strlen("Arguments"))."\n";
             foreach ($arguments as $argument) {
-                $out .= "*".$argument->name."\t".$argument->description."\n";
+                $out .= "- ".$argument->name."\t*".$argument->description."*\n";
             }
 
 
             $out .= "\nOptions\n";
             $out .= str_repeat('=', strlen("Options"))."\n";
             foreach ($options as $option) {
-                $out .= "*".$option->name."\t".$option->description."\n";
+                $out .= "- ".$option->name."\t*".$option->description."*\n";
             }
         }
 
